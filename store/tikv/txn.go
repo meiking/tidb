@@ -510,6 +510,7 @@ func (txn *tikvTxn) IsReadOnly() bool {
 }
 
 func (txn *tikvTxn) StartTS() uint64 {
+	logutil.BgLogger().Info("Hello transaction")
 	return txn.startTS
 }
 
